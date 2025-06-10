@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Daisy's Bedroom</title>
+    <meta name="description" content="Daisy's Bedroom">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <a-scene vr-mode-ui="enabled: true" background="color: #f5eaff">
+      
+     <!-- LIGHTING -->
+    <a-light type="ambient" color="#ffffff" intensity="0.8"></a-light>
+    <a-light type="directional" position="2 4 2" intensity="0.9" color="#ffffff" castShadow="true"></a-light>
+
+
+      <!-- CAMERA -->
+      <a-entity position="0 2 4">
+        <a-camera wasd-controls look-controls></a-camera>
+      </a-entity>
+
+
+      <!-- ASSETS -->
+      <a-assets>
+        <a-asset-item id="bedModel" src="assets/bedModel.glb"></a-asset-item>
+        <a-asset-item id="flowerModel" src="assets/flowerModel.glb"></a-asset-item>
+        <a-asset-item id="mushroomModel" src="assets/mushroomModel.glb"></a-asset-item>
+        <a-asset-item id="pondModel" src="assets/pondModel.glb"></a-asset-item>
+        <a-asset-item id="cutieDaisy" src="assets/cutieDaisy.glb"></a-asset-item>
+        <a-asset-item id="daisyCharacter" src="assets/daisyCharacter.glb"></a-asset-item>
+        <a-asset-item id="lowPolyFlower" src="assets/lowPolyFlower.glb"></a-asset-item>
+        <a-asset-item id="happyFlower" src="assets/happyFlower.glb"></a-asset-item>
+        <a-asset-item id="marioFireFlower" src="assets/marioFireFlower.glb"></a-asset-item>
+      </a-assets>
+
+    <!-- SCENE OBJECTS -->
+    <!-- Pond as the central base -->
+    <a-entity gltf-model="#pondModel" position="0 -0.1 -2.5" scale="1.2 1 1.2"></a-entity>
+
+    <!-- Bed positioned to the left -->
+    <a-entity gltf-model="#bedModel" position="-4.5 1.8 -2" scale="30 30 30"></a-entity>
+
+    <!-- Daisy characters -->
+    <a-entity gltf-model="#daisyCharacter" position="-1.5 0 -2" scale="0.25 0.25 0.25"></a-entity>
+    <a-entity gltf-model="#cutieDaisy" position="1.5 0 -2" scale="0.25 0.25 0.25"></a-entity>
+
+    <!-- Flowers around the pond -->
+    <a-entity gltf-model="#flowerModel" position="0 0.1 -3.5" scale="0.4 0.4 0.4"></a-entity>
+    <a-entity gltf-model="#flowerModel" position="-2 0 -1.5" scale="0.3 0.3 0.3" rotation="0 45 0"></a-entity>
+
+    <!-- Fire flower -->
+    <a-entity gltf-model="#marioFireFlower" position="0.5 2.3 -3.8" scale="0.4 0.4 0.4"></a-entity>
+
+    <!-- Low poly flowers distributed around -->
+    <a-entity gltf-model="#lowPolyFlower" position="2.2 0 -3.2" scale="0.3 0.3 0.3" rotation="0 -30 0"></a-entity>
+    <a-entity gltf-model="#lowPolyFlower" position="-2.5 0 -3" scale="0.25 0.25 0.25" rotation="0 60 0"></a-entity>
+    <a-entity gltf-model="#lowPolyFlower" position="1 0 -1.2" scale="0.35 0.35 0.35"></a-entity>
+
+    <!-- Happy flowers as accent pieces - spread out -->
+    <a-entity gltf-model="#happyFlower" position="3 1 -1.8" scale="2 2 2" rotation="0 180 0"></a-entity>
+    <a-entity gltf-model="#happyFlower" position="-3.2 1 -1.5" scale="2 2 2" rotation="0 90 0"></a-entity>
+
+    <!-- Mushrooms -->
+    <a-entity gltf-model="#mushroomModel" position="3.2 1 -3.8" scale="0.5 0.5 0.5"></a-entity>
+    <a-entity gltf-model="#mushroomModel" position="-3.5 1 -3.2" scale="0.4 0.4 0.4"></a-entity>
+    <a-entity gltf-model="#mushroomModel" position="3.8 1 -0.8" scale="0.3 0.3 0.3"></a-entity>
+
+    <!-- Sky -->
+    <a-sky color="#f5eaff"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
